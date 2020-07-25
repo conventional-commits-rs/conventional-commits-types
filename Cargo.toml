@@ -1,6 +1,10 @@
 [package]
-name = "zerotask-rust-lib-template"
+name = "conventional-commits-types"
+description = "A library defining conventional-commits types"
 version = "0.1.0"
 license = "MIT OR Apache-2.0"
 authors = ["Sven Lechner <SirWindfield@users.noreply.github.com>"]
 edition = "2018"
+
+[dependencies]
+serde = { version = "1.0.114", features = ["derive"], optional = true }
