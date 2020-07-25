@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Commit","A commit message."],["Footer","A commit footer."]]});
