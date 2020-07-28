@@ -1,29 +1,8 @@
-# zerotask-rust-lib-template
+# conventional-commits-types
 
 [![docs_master_badge]][docs_master_url]
 
-> A GitHub template for Rust libraries.
-
-## Features
-
-- Continuous Integration through GitHub Actions
-  - Each PR is tested by running the following commands to ensure that only working code is added to the repository:
-    - `cargo fmt` to ensure uniform source code formatting.
-    - `cargo clippy` to use more idiomic Rust code, optimize code as well as prevent hard to spot bugs.
-    - `cargo check` to ensure that the library compiles properly.
-    - `cargo test` to ensure that the library works as expected.
-  - Each push to master triggers the following:
-    - Generation of the newest documentation that gets pushed to the `gh-pages` branch.
-- MSRV (**M**inimal **s**upported **R**ust **v**ersion)
-  - Kept in sync with the latest available Rust version on Ubuntu.
-- Opinioded `rustfmt` configuration file.
-- Misc
-  - `.editorconfig` file for code-unrelated files.
-    - Ensures proper formatting for workflow files and other configuration files.
-
-## Current Properties
-
-- MSRV: 1.41.0
+> A library defining structs and enums to work with conventional commits.
 
 ## License
 
