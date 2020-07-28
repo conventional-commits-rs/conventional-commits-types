@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["Commit","A commit message."],["Footer","A commit footer."]]});
+initSidebarItems({"enum":[["FooterSeparator","The separator used to separate the token and value of a footer."]],"struct":[["Commit","A commit message."],["Footer","A commit footer."]]});
