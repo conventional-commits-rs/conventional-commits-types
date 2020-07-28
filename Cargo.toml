@@ -3,6 +3,7 @@ name = "conventional-commits-types"
 description = "A library defining conventional-commits types"
 version = "0.2.0"
 license = "MIT OR Apache-2.0"
+readme = "README.md"
 authors = ["Sven Lechner <SirWindfield@users.noreply.github.com>"]
 edition = "2018"
 
