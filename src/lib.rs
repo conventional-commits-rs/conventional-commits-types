@@ -6,6 +6,12 @@ use serde::{Deserialize, Serialize};
 use std::fmt;
 use std::str::FromStr;
 
+/// The `:<space>` separator.
+pub const SEPARATOR_COLON: &str = ": ";
+
+/// The `<space>#` separator for footer notes.
+pub const SEPARATOR_HASHTAG: &str = " #";
+
 /// A commit message.
 ///
 /// The different sections are separated by an empty newline.
@@ -67,15 +73,11 @@ impl<'a> Footer<'a> {
         Self::default()
     }
 
-    pub fn from(
-        token: &'a str,
-        separator: FooterSeparator,
-        value: &'a str,
-    ) -> Self {
+    pub fn from(token: &'a str, separator: FooterSeparator, value: &'a str) -> Self {
         Self {
             token,
             separator,
-            value
+            value,
         }
     }
 }
@@ -97,8 +99,8 @@ impl Default for FooterSeparator {
 impl fmt::Display for FooterSeparator {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
-            FooterSeparator::ColonSpace => write!(f, ": "),
-            FooterSeparator::SpaceHashTag => write!(f, " #"),
+            FooterSeparator::ColonSpace => write!(f, "{}", SEPARATOR_COLON),
+            FooterSeparator::SpaceHashTag => write!(f, "{}", SEPARATOR_HASHTAG),
         }
     }
 }
@@ -108,9 +110,9 @@ impl FromStr for FooterSeparator {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
-            ": " => Ok(FooterSeparator::ColonSpace),
-            " #" => Ok(FooterSeparator::SpaceHashTag),
-            _ => Err("footer separator not recognized".to_string())
+            SEPARATOR_COLON => Ok(FooterSeparator::ColonSpace),
+            SEPARATOR_HASHTAG => Ok(FooterSeparator::SpaceHashTag),
+            _ => Err("footer separator not recognized".to_string()),
         }
     }
 }
