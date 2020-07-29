@@ -1,1 +1,1 @@
-initSidebarItems({"enum":[["FooterSeparator","The separator used to separate the token and value of a footer."]],"struct":[["Commit","A commit message."],["Footer","A commit footer."]]});
+initSidebarItems({"constant":[["SEPARATOR_COLON","The `:<space>` separator."],["SEPARATOR_HASHTAG","The `<space>#` separator for footer notes."]],"enum":[["FooterSeparator","The separator used to separate the token and value of a footer."]],"struct":[["Commit","A commit message."],["Footer","A commit footer."]]});
